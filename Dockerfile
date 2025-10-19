@@ -1,10 +1,7 @@
 FROM node:16-alpine3.15 as builder
-
 # VOLUME [ "/data" ]
-
-ARG DB_TYPE=sqlite
+ARG DB_TYPE=postgresql
 ENV DB_TYPE=$DB_TYPE
-
 RUN apk add --no-cache python3 py3-pip make gcc g++
 
 COPY . /app

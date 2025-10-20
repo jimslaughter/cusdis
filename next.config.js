@@ -20,5 +20,12 @@ module.exports = {
       },
     ];
   },
-  // ... keep any other existing config
+  rewrites() {
+    return [
+      {
+        source: '/doc',
+        destination: '/doc/index.html'
+      }
+    ]
+  }
 };
